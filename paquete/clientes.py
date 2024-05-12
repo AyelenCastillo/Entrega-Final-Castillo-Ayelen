@@ -9,4 +9,5 @@ class Cliente:
         return f"Nombre: {self.usuario}, Email: {self.email}, Teléfono: {self.telefono}, Dirección: {self.direccion}"
 
     def buy(self, producto):
+        print(f"Datos del cliente:\n{self}")
         print(f"{self.usuario} ha comprado {producto}.")
