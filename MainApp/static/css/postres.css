@@ -1,0 +1,15 @@
+section{
+    width: auto;
+    height: 200px; 
+    margin-top: 100px;
+ }
+ 
+.postres{
+    width: auto;
+    height: 100px;
+    background-color: transparent; 
+    background-image: linear-gradient(rgba(51, 77, 62, 0.5), rgba(51, 77, 62, 0.5)), url(https://spartanrestaurante.es/wp-content/uploads/2023/12/recetas-de-postres-navidenos-faciles-y-economicos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }

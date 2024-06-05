@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/banneer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/comidas.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/formModal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/postres.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/buscar.css' %}">
+    <title>Recetas</title>
+</head>
+<body> 
+<header class="mainNav">
+    <div class="mainNav__logo">Recetas</div> 
+    <div class="mainNav__links">
+        <img class="mainNav__icon" src="{% static 'img/home.png' %}" alt="Home"> <a href="/MainApp/" class="mainNav__link">Inicio</a>
+        <img class="mainNav__icon" src="{% static 'img/postre.png' %}" alt="Postres"><a href="/MainApp/postres" class="mainNav__link">Postres</a> 
+        <img class="mainNav__icon" src="{% static 'img/comida.png' %}" alt="Comidas"><a href="/MainApp/comidas" class="mainNav__link">Comidas</a> 
+        <img class="mainNav__icon" src="{% static 'img/registro.png' %}" alt="Registro"><a href="/MainApp/registro" class="mainNav__link">Registro</a> 
+    </div>
+</header>
+
+        {% block contenidoQueCambia %}
+  
+        {% endblock contenidoQueCambia %}
+
+<footer>
+        <p>Recetas deliciosas para todos</p>
+        <div>
+            <img  src="{% static 'img/facebook.png' %}" alt="Facebook"><a href="" class="mainNav__link"></a>
+            <img  src="{% static 'img/instagram.png' %}" alt="Instagram"><a href="" class="mainNav__link"></a>
+            <img  src="{% static 'img/x.png' %}" alt="x"><a href="" class="mainNav__link"></a> 
+            <img src="{% static 'img/pinterest.png' %}" alt="Pinterest"><a href="" class="mainNav__link"></a>
+        </div>
+</footer>
+<script src="{% static '/js/modalcomidas.js'%}"></script>
+</body>
+</html>

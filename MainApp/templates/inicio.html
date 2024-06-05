@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+
+{% block contenidoQueCambia %}
+<main>
+    <div class="banner">
+        <div class="banner__content">
+            <article class="banner__text">
+                <p class="banner__preTitle">Autor: Mauricio Cuello (Profesor de Coder)</p>
+                <h2 class="banner__title">Milanesas tips especiales</h2>
+                <p class="banner__description">
+                    ¿Cuál es la mejor carne para milanesas? <br>
+                    - La nalga <br>
+                    - La bola de lomo <br>
+                    Para ablandar la carne para milanesa: Si te toca una carne muy dura, puedes darle unos golpes para que se ablande un poco.
+                </p>
+                <button class="cta">Ver Detalles</button>
+            </article>
+            <figure class="banner__image">
+                <img src="https://www.paulinacocina.net/wp-content/uploads/2015/02/P1150532-e1439166507842.jpg" alt="Python"/>
+            </figure>
+        </div>  
+    </div>
+    <div class="buscar">
+      {% include "busqueda.html" %}
+  </div>
+  <div class="resultados">
+   {% if message %}
+<p>{{ message }}</p>
+{% elif results %}
+<h3>Resultados de la búsqueda:</h3>
+<ul>
+{% for result in results %}
+    <li>{{ result.titulo }} - {{ result.autor }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+  </div>
+</main>
+{% endblock contenidoQueCambia %}

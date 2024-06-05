@@ -1,0 +1,67 @@
+#openModalButton {
+    display: flex; 
+    z-index: 1;
+    padding: 10px;
+    margin-left: 100px;
+    background-color: aquamarine;
+    border: 1px solid black; 
+    border-radius: 8px; 
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#myModal {
+  width: 100%;
+  height: 600px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(rgba(51, 77, 62, 0.5), rgba(51, 77, 62, 0.5)), url('https://media.istockphoto.com/id/1198380802/es/vector/fondo-de-comida-verduras-patrón-sin-costura-alimentación-saludable-tomate-ajo-zanahoria.jpg?s=612x612&w=0&k=20&c=L569kWomLRU2z8iJgQDLqXWHTJQdj4BCl2mpc-65Jc4=');
+  z-index: 2;
+  color: white;
+}
+
+
+#myModal form {
+  margin: 0 auto; 
+  max-width: 500px; 
+  padding: 20px; 
+}
+
+#myModal h2{
+  text-align: center;
+}
+
+#myModal input[name="titulo"],
+#myModal input[name="autor"] {
+  width: calc(100% - 20px);
+  padding: 10px; 
+  margin-bottom: 20px; 
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+#myModal input[name="receta"] {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    resize: horizontal; 
+    white-space: pre-line; /* Añadido white-space */
+}
+
+
+button {
+  color: black;
+}

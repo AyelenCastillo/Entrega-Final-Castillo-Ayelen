@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block contenidoQueCambia %}
+<section>
+
+<div class="head">
+    <button id="openModalButton">¡Comparte tus recetas con nosotros!</button>
+    
+    <div id="myModal" role="dialog"> 
+       <h2>Completa el formulario para compartir tus recetas con esta comunidad</h2>
+      <form action=" {% url 'comidas' %} " method="post"> {% csrf_token %}
+        <p> Titulo: <input type="text" name="titulo"> </p> 
+        <p> Receta: <input type="text" name="receta"> </p> 
+        <p> Autor: <input type="text" name="autor"> </p> 
+        <button class="btn" type="submit">Cargar Receta</button> 
+        <button class="btn" id="closeModalButton">Cancelar</button>  
+      </form>     
+    </div>   
+</div> 
+
+ {% include "cards.html" %}
+{% endblock contenidoQueCambia %}
