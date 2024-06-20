@@ -1,0 +1,27 @@
+
+.confirmation-article {
+    width: 500px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 3px 25px hsla(0, 0%, 0%, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+.confirmation-article form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+.confirmation-text {
+    font-size: 22px;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+}

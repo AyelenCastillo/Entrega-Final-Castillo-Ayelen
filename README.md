@@ -1,37 +1,62 @@
+# Recetas
 
-(para ingresar a la base de datos y comprobar la creacion de los campos 
-usuario: admin
-Password: admin1234)
+Recetas es una pagina web en la cual podemos compartir recetas de la madre, la abuela, la tia, etc.
 
------Para probar el buscador------
--ir a la pagina de inicio (/MainApp/)
--en la parte de abajo encontrara una barra con un boton que dice buscar
--en el imput puede poner la palabra milanesa o frutilla si quiere un resultado
--si utiliza cualquier otra palabra no encontrara nada
+## Tabla de Contenidos
 
-------Para probar formulario postres-------
-(antes de pasar a las instrucciones necesito avisar que el imput de receta tiene un error estetico que no pude solucionar,
-ademas por un motivo que desconosco al darle al boton cancelar se crea una entrada vacia en la base de datos.
-si pudiera ayudarme a solucionar esos errores estaria muy agradecida)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Contacto](#contacto)
 
--dirigirse a la seccion de postres dentro de la pagina o escribiendo en la barra de direcciones (/MainApp/postres/)
--como recomendacion personal diria q copie el texto lorem de las cards de ejemplo que hay en la pagina para pegarlo en el campo de recetas
--en el banner que se encuentra debajo del header vera un boton verde que dice ¡Comparte tus recetas con nosotros!
--al hacer click en ese boton se abrira un modal con un formulario complete los campos como desee
-- si quiere continuar con el post de la receta presione cargar receta de lo contrario presione cancelar
--hecho el post sera redirigido a la pargina nuevamente
+## Instalación
 
-----Para probar formulario comidas-----
-(mismo problema que con postres)
--dirigirse a la seccion de comidas dentro de la pagina o escribiendo en la barra de direcciones (/MainApp/comidas/)
--como recomendacion personal diria q copie el texto lorem de las cards de ejemplo que hay en la pagina para pegarlo en el campo de recetas
--en el banner que se encuentra debajo del header vera un boton verde que dice ¡Comparte tus recetas con nosotros!
--al hacer click en ese boton se abrira un modal con un formulario complete los campos como desee
-- si quiere continuar con el post de la receta presione cargar receta de lo contrario presione cancelar
--hecho el post sera redirigido a la pargina nuevamente
+Para utilizar este proyecto, asegúrate de tener Python y Django instalados. Además, necesitarás instalar la biblioteca Pillow para manejar imágenes:
 
------Para probar Registro------
--dirigirse a la seccion de registro dentro de la pagina o escribiendo en la barra de direcciones (/MainApp/registro/)
-- completar los campos con lo que desee
--presionar el boton registrarse
--una vez registrado sera rederigido a la pag de inicio 
+```bash 
+pip install Pillow 
+
+```
+## Uso
+
+La pagina puedes ser vista por cualquier usuario, pero para poder cargar recetas hay que registrarse e iniciar secion
+
+Registro:
+1. dirigirse a el apartado registo que se encuenta en el navbar
+2. completar los datos 
+3. hacer click en registrarse
+
+Iniciar Sesion
+1. dirigirse a el apartado Iniciar sesion que se encuenta en el navbar
+2. completar los datos 
+3. hacer click en registrarse
+
+Navegacion en Perfil
+1. una vez logeado el usuario, los botos iniciar sesion y registrarse desapreceran dejando lugar al nombre del usuario desde el cual podran acceder a Perfil
+2. dentro de perfil el ususario podra administrar sus recetas y su cuenta
+
+Gestión de Avatares
+Para cargar o cambiar un avatar:
+
+1. Inicia sesión en tu cuenta de usuario.
+2. hacer click sobre el nombre.
+3. Haz clic en "Avatar".
+4. en caso de no tener imagen se accedera a un formulario para cargarla. En caso de tener una se accede a un formulario para cambiarlarla o eliminarla
+5. Sube la imagen desde tu dispositivo y guarda los cambios.
+
+cargar Comida o postres:
+los pasos son iguales para las dos secciones
+1. Inicia sesión en tu cuenta de usuario.
+2. dirigirse a la seccion q desees.autor-comida
+3. hacer click en ¡Comparte tus recetas con nosotros!
+4. completar los campos 
+5. click en cargar comida
+
+
+## Contacto
+
+de momento no tengo nada 
+link del video explicacion de la pagina :
+https://youtu.be/jqJrOt2ESsU?si=s2BmfW_z52a_a-YI
+---
+
+2024 [Ayelen Castillo]

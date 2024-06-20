@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+{% block contenidoQueCambia %}
+
+<section>
+    <div class="titulo">
+        <hr>
+        {% if is_new_avatar %}
+        <h2>Subir Avatar</h2>
+        {% else %}
+        <h2>Cambiar Avatar</h2>
+        {% endif %}
+    </div>
+    <hr>
+    <article>
+        {% if avatar and avatar.imagen %}
+        <div class="current-avatar">
+            <h3>Avatar Actual</h3>
+            <img src="{{ avatar.imagen.url }}" alt="Avatar Actual" class="avatar-actual">
+        </div>
+        <hr>
+        {% elif avatar and not avatar.imagen %}
+        <p>No tienes un avatar configurado.</p>
+        <hr>
+        {% endif %}
+        <form class="avatarform" action="{% url 'avatar' %}" method="post" enctype="multipart/form-data"> 
+        {% csrf_token %}
+            
+            {{ form.as_p }}
+
+            <div class="button-container">
+                <button type="submit">Guardar Cambios</button>
+                <a href="{% url 'inicio' %}"><button type="button">Cancelar</button></a>
+            </div>
+        </form>
+    </article>
+</section>
+    
+{% endblock contenidoQueCambia %}

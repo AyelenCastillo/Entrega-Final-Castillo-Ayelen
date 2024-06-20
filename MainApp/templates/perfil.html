@@ -1,0 +1,86 @@
+{% extends "main.html" %}
+{% block contenidoQueCambia %}
+<section>
+    <div class="titulo">
+        <hr>
+        <h2>¡¡Bienvenido {{ user }}!!</h2>
+    </div>
+    <article>
+        <a href="{% url 'editarusuario' user.id %}"><button>Editar mi cuenta</button></a>
+        <a href="{% url 'userdelete' user.id  %}"><button type="submit">Eliminar mi cuenta</button></a>
+    </article>
+    <hr>
+
+    <div class="tabla">
+        <h4>Mis Comidas:</h4>
+        <table>
+            <thead>
+                <tr> 
+                    <th>Comidas</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for comida in comidas %}
+                <tr> 
+                    <td><a class="detalles"  href="{% url 'comidadetalles' comida.id %}">{{ comida.titulo }}</a></td>
+                    <td> 
+                        {% if user.is_staff or comida.autor == user %}
+                        <a href="{% url 'comidadelete' comida.id %}"><button type="submit">Eliminar</button></a>
+                        <a href="{% url 'editarcomida' comida.id %}"><button>Editar</button></a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h4>Mis Postres:</h4>
+        <table>
+            <thead>
+                <tr> 
+                    <th>Postres</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for postre in postres %}
+                <tr>
+                    <td><a class="detalles" href="{% url 'postresdetalles' postre.id %}">{{ postre.titulo }}</a></td>
+                    <td> 
+                        {% if user.is_staff or postre.autor == user %}
+                        <a href="{% url 'postresdelete' postre.id %}"><button type="submit">Eliminar</button></a>
+                        <a href="{% url 'editarpostre' postre.id %}"><button>Editar</button></a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% if user.is_staff %}
+    <div class="tabla">
+        <h4>Usuarios:</h4>
+        <table>
+            <thead>
+                <tr> 
+                    <th>Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario.username }}</td>
+                    <td>
+                        <a href="{% url 'editarusuario' usuario.id %}"><button>Editar</button></a>
+                        <a href="{% url 'userdelete' usuario.id %}"><button type="submit">Eliminar</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+</section>
+{% endblock contenidoQueCambia %}

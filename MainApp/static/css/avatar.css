@@ -1,0 +1,23 @@
+
+
+.current-avatar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.current-avatar h3 {
+    margin-bottom: 10px;
+}
+
+.avatar-actual {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.avatarform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

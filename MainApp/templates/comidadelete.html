@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block contenidoQueCambia %}
+<section>
+    <article class="confirmation-article">
+        <form action="{% url 'comidadelete' comida.id %}" method="post"> {%csrf_token%}
+            <p class="confirmation-text">¿Está seguro que desea eliminar la comida?</p>
+            <div class="button-group">
+                <a href="{% url 'perfil' %}" ><button type="submit">Confirmar</button></a>
+                <a href="{% url 'perfil' %}" ><button type="button">Cancelar</button></a>
+            </div>
+        </form>
+    </article>
+</section>
+{% endblock contenidoQueCambia %}

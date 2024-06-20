@@ -1,26 +1,28 @@
 from django.db import models
-
-# Create your models here.
+from django.contrib.auth.models import User
 
 class Postres(models.Model):
-    titulo = models.CharField(max_length=40)
-    receta =  models.TextField()
-    autor = models.CharField(max_length=30)
+    titulo = models.CharField(max_length=100)
+    receta = models.TextField()
+    ingredientes = models.TextField(default=None)  
+    autor = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.titulo} - {self.autor}'
-
 
 class Comidas(models.Model):
-    titulo = models.CharField(max_length=40)
-    receta =  models.TextField()
-    autor = models.CharField(max_length=30)
+    titulo = models.CharField(max_length=100)
+    receta = models.TextField()
+    ingredientes = models.TextField(default=None)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.titulo} - {self.autor}'
 
-class Registro(models.Model):
-    nombre = models.CharField(max_length=30)
-    password = models.CharField(max_length=128, default='password123')
-    email= models.EmailField(null=True)
+class Avatar(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to='avatares', null=True, blank=True)
 
+    def __str__(self):
+        return f"{self.user} - {self.imagen}"
+    

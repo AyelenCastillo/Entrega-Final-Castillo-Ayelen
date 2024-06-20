@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+{% block contenidoQueCambia %}
+<section>
+<div class="detalle-comida">
+    <h1 class="titulo-comida">Detalles de la Comida: {{ comida.titulo }}</h1>
+    <p class="autor-comida">Receta por: {{ comida.autor.nombre }}</p>
+    <p class="ingredientes-comida">Ingredientes:</p>
+    <pre class="container">{{ comida.ingredientes }}</pre>
+    <p class="receta-comida">Receta:</p>
+    <pre class="container">{{ comida.receta }}</pre>
+</div>
+</section>
+{% endblock contenidoQueCambia %}

@@ -17,13 +17,3 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-
-.btn {
-    padding: 10px 20px;
-    background: linear-gradient(-5deg, hsl(86, 61%, 44%), hsl(86, 65%, 54%));
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}

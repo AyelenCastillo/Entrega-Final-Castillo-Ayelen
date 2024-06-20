@@ -1,9 +1,4 @@
-section{
-    width: auto;
-    height: 200px; 
-    margin-top: 100px;
- }
- 
+
 .postres{
     width: auto;
     height: 100px;
@@ -12,4 +7,5 @@ section{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
     }

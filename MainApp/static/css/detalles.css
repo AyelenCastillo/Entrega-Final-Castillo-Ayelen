@@ -1,0 +1,35 @@
+
+.detalle-comida {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+   
+}
+.titulo-comida {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.autor-comida {
+    color: #666;
+    margin-bottom: 15px;
+}
+.texto-comida {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: auto; 
+    white-space: pre-wrap;
+}
+.container {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+    max-height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+}

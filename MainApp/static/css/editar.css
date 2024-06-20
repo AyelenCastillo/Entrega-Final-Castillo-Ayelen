@@ -1,0 +1,57 @@
+.titulo {
+    text-align: center;
+}
+
+.titulo h2 {
+    color: #5a5a5a;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+}
+
+article{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}

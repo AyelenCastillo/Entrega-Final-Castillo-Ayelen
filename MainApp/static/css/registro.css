@@ -1,50 +1,20 @@
-body {
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    background: hsl(86, 85%, 95%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-  
-  .btn-reg {
-    width: 100%;
-    outline: none !important;
-    background: linear-gradient(-5deg, hsl(86, 61%, 44%), hsl(86, 65%, 54%));
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0 3px 0px hsla(86, 21%, 44%, 0.2);
-    text-shadow: 0 2px 3px hsla(0, 0, 0, 0.2);
-    padding: 10px;
-    cursor: pointer;
-    color: white;
-    border-radius: 5px;
-  }
-  
+
   .signup {
-    width: 800px;
+    width: 500px;
     background: hsl(0, 0%, 100%);
     border-radius: 10px;
     box-shadow: 0 3px 25px hsla(0, 0%, 0%, 0.2);
     overflow: hidden;
     padding: 20px;
-    margin-top: 50px;
+    margin: 20px auto;
   }
   
-  .signup form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  
   
   .signup form input[type="text"],
-  .signup form input[type="email"],
   .signup form input[type="password"] {
-    width: calc(100% - 40px);
+    width: calc(100% - 22px); 
     padding: 10px;
-    margin-bottom: 20px;
     color: #333;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -52,4 +22,5 @@ body {
     font-size: 16px;
     box-sizing: border-box;
   }
+  
   

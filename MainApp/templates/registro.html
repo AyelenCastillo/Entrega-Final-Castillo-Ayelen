@@ -1,12 +1,14 @@
 {% extends "main.html" %}
 {% block contenidoQueCambia %}
 <section>
-<div class="signup">
-<form action=" {% url 'registro' %} " method="post"> {% csrf_token %}
-{{miFormulario.as_p}}
-<button class="btn-reg" type="submit">Registrarse</button> 
-</form>
-  </div>
+    <div class="signup">
+        <form id="registro-form" action="{% url 'registro' %}" method="post">
+            {% csrf_token %}
+            
+            {{miFormulario.as_p}}
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
 </section>
 {% endblock contenidoQueCambia %}
-

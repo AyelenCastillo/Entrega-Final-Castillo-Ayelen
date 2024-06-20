@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+{% load static %}  
+
+{% block contenidoQueCambia %}
+
+<section class="about-section">
+    <div class="about">
+        <img src="{% static 'img/postresricos.jpg' %}" alt="Postres Ricos">
+    </div>
+    <article class="about-content">
+        <hr>
+        <h1>Acerca de Nosotros</h1>
+        <hr>
+        <p>
+            Bienvenido a Recetas, tu destino principal para descubrir, compartir y disfrutar de las mejores recetas culinarias.  <br>
+            En nuestra página web, nos dedicamos a reunir una comunidad de apasionados por la cocina, desde chefs profesionales hasta cocineros caseros. <br>
+        </p>
+        <p>
+            Creemos que la comida tiene el poder de unir a las personas. Por eso, fomentamos un espacio donde los usuarios pueden subir sus recetas favoritas, <br>
+            explorar nuevas ideas culinarias, y aprender de las experiencias de otros. Ya sea que estés buscando la receta perfecta para una cena especial, <br>
+            o simplemente quieras experimentar con nuevos sabores, Recetas es el lugar ideal para ti. <br>
+        </p>   
+        <p>
+            Nuestro objetivo es hacer que cocinar sea una experiencia divertida y accesible para todos. <br>
+             Únete a nosotros en este delicioso viaje gastronómico y comparte tu amor por la cocina con el mundo. <br>
+             ¡Empieza a cocinar, comparte tus recetas y disfruta de cada momento en Recetas!<br>
+        </p>
+
+    </article>
+    <div class="about">
+        <img src="{% static 'img/comidarica.jpg' %}" alt="Postres Ricos">
+    </div>
+</section>
+
+{% endblock contenidoQueCambia %}

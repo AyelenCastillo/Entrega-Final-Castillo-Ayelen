@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block contenidoQueCambia %}
+<section>
+    <div class="login">
+        <form id="iniciosesion-form" action="{% url 'iniciosesion' %}" method="post">
+            {% csrf_token %}
+           
+            {{miFormulario.as_p}}
+
+            <button  type="submit">Iniciar Sesión</button>
+
+        </form>
+    </div>
+</section>
+
+
+{% endblock contenidoQueCambia %}

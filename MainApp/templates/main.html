@@ -11,24 +11,52 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/postres.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/registro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/iniciosesion.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/buscar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/perfil.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detalles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/buttons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/editar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/delete.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/avatar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
     <title>Recetas</title>
 </head>
 <body> 
-<header class="mainNav">
-    <div class="mainNav__logo">Recetas</div> 
-    <div class="mainNav__links">
-        <img class="mainNav__icon" src="{% static 'img/home.png' %}" alt="Home"> <a href="/MainApp/" class="mainNav__link">Inicio</a>
-        <img class="mainNav__icon" src="{% static 'img/postre.png' %}" alt="Postres"><a href="/MainApp/postres" class="mainNav__link">Postres</a> 
-        <img class="mainNav__icon" src="{% static 'img/comida.png' %}" alt="Comidas"><a href="/MainApp/comidas" class="mainNav__link">Comidas</a> 
-        <img class="mainNav__icon" src="{% static 'img/registro.png' %}" alt="Registro"><a href="/MainApp/registro" class="mainNav__link">Registro</a> 
-    </div>
-</header>
+    <header class="mainNav">
+        <div class="mainNav__logo">Recetas</div> 
+        <div class="mainNav__links">
+            <img class="mainNav__icon" src="{% static 'img/home.png' %}" alt="Home"> <a href="/MainApp/" class="mainNav__link">Inicio</a>
+            <img class="mainNav__icon" src="{% static 'img/about.png' %}" alt="Nosotros"><a href="/MainApp/about" class="mainNav__link">Sobre Nosotros</a> 
+            <img class="mainNav__icon" src="{% static 'img/postre.png' %}" alt="Postres"><a href="/MainApp/postres" class="mainNav__link">Postres</a> 
+            <img class="mainNav__icon" src="{% static 'img/comida.png' %}" alt="Comidas"><a href="/MainApp/comidas" class="mainNav__link">Comidas</a> 
+            
+            {% if user.is_authenticated %}
+                
+            <div class="dropdown">
+                {% if avatar_url %}
+               <img class="avatar" src="{{ avatar_url }}" alt="Avatar">
+                {% endif %}
+                <button class="dropbtn">{{user.username}}</button>
+                <div class="dropdown-content">
+                    <a href="{% url 'perfil' %}">Ver Perfil</a>
+                    <a href="{% url 'avatar' %}">Avatar</a>
+                    <form method="post" action="{% url 'logout' %}"> {% csrf_token %}
+                    <button class="logout" type="submit" >Cerrar Sesión</button>
+                    </form>
+                </div>
+            </div>
+            {% else %}
+            <img class="mainNav__icon" src="{% static 'img/registro.png' %}" alt="Iniciosesion"><a href="/MainApp/iniciosesion" class="mainNav__link">Inicio de Sesión</a> 
+            <img class="mainNav__icon" src="{% static 'img/registro.png' %}" alt="Registro"><a href="/MainApp/registro" class="mainNav__link">Registro</a> 
+            {% endif %}
+        </div>
+    </header>
 
         {% block contenidoQueCambia %}
   
         {% endblock contenidoQueCambia %}
-
+        
 <footer>
         <p>Recetas deliciosas para todos</p>
         <div>
@@ -38,6 +66,6 @@
             <img src="{% static 'img/pinterest.png' %}" alt="Pinterest"><a href="" class="mainNav__link"></a>
         </div>
 </footer>
-<script src="{% static '/js/modalcomidas.js'%}"></script>
+
 </body>
 </html>
